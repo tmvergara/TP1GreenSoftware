@@ -14,13 +14,13 @@ X = digits.data  # c/u un array de 64 píxeles
 y = digits.target
 
 # 3. Visualizar 10 imágenes del dataset
-fig, axes = plt.subplots(2, 5, figsize=(10, 5))
-for i, ax in enumerate(axes.flat):
-    ax.imshow(digits.images[i], cmap='gray')
-    ax.set_title(f"Etiqueta: {digits.target[i]}")
-    ax.axis('off')
-plt.tight_layout()
-plt.show()
+# fig, axes = plt.subplots(2, 5, figsize=(10, 5))
+# for i, ax in enumerate(axes.flat):
+#     ax.imshow(digits.images[i], cmap='gray')
+#     ax.set_title(f"Etiqueta: {digits.target[i]}")
+#     ax.axis('off')
+# plt.tight_layout()
+# plt.show()
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
 clf = RandomForestClassifier(n_estimators=100, random_state=42)
